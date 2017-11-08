@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html  manifest="fest.mf">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>斗地主</title>
+<meta name="Description" content="斗地主"> 
+<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<style type="text/css">
+    //body{background: #5522A1;}
+    body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        background-color: #eee;
+        font-size: 12px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-text-size-adjust: none;
+    }
+#game {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+    box-sizing: border-box;
+
+}
+#msg {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: #fff url(images/msg.jpg) no-repeat center center;
+}
+#bg{margin: auto}
+</style>
+<title>乐斗地主</title>
+<meta name="game-id" content="doudizhu" />
+<script type="text/javascript" src="js/casual-0.1.min.js"></script>
+<link type="text/css" rel="stylesheet" href="data:text/css,">
+<script type="text/javascript" src="js/GroupBitmap.min.js"></script>
+<script type="text/javascript" src="js/ImageLoader.min.js"></script>
+<script type="text/javascript" src="js/TweenUtil.min.js"></script>
+<script type="text/javascript" src="js/Poker.min.js"></script>
+<script type="text/javascript" src="js/Player.min.js"></script>
+<script type="text/javascript" src="js/UI.min.js"></script>
+<script type="text/javascript" src="js/Menu.min.js"></script>
+<script type="text/javascript" src="js/Level.min.js"></script>
+<script type="text/javascript" src="js/Rule.min.js"></script>
+<script type="text/javascript" src="js/AI.min.js"></script>
+<script type="text/javascript" src="js/R.min.js"></script>
+<script type="text/javascript" src="js/gamehub1.min.js"></script>
+<script type="text/javascript" src="js/ddz.min.js"></script>
+<script type="text/javascript" src="js/ddz_single.min.js"></script>
+<script type="text/javascript" src="js/ddz_gamble.min.js"></script>
+<script type="text/javascript" src="js/ddz_play.min.js"></script>
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon-precomposed" href="imgs/icon.png" />
+<link rel="apple-touch-startup-image" href="imgs/startup.png">
+<script type="text/javascript">document.write('<script type="text/javascript" src="js/resource_loader.js?ver='+Math.random()+'"><\/script>')</script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+function onBridgeReady(){
+ WeixinJSBridge.call('hideOptionMenu');
+}
+
+if (typeof WeixinJSBridge == "undefined"){
+    if( document.addEventListener ){
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    }else if (document.attachEvent){
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+}else{
+    onBridgeReady();
+}
+</script>
+
+ <link rel="stylesheet" type="text/css" href="js/popup.css">  
+    <script type="text/javascript" src="js/common.min.js"></script>
+    <script type="text/javascript" src="js/popup.min.js"></script>
+    <script type="text/javascript" src="js/gamehub.min.js"></script>
+    <script type="text/javascript"> 
+      var sid = ""; 
+      Gamehub.Settings.gameName = "DouDiZhu"; 
+      if (typeof StartGame == 'function') { 
+        StartGame(); 
+      } 
+      window.scrollTo(0, 1); 
+</script>
+        <div style="text-align:center">
+            <h1>逗斗地主</h1>
+        </div>
+        <div id="game" style="text-align: center"></div>
+        <div id="msg"></div>
+        <script type="text/javascript">
+            //Gamehub1.Settings.gameName = "DouDiZhu";
+            Gamehub1.Settings.score = "0";
+            //if (typeof StartGame != "undefined") {
+            //  StartGame();
+            //}
+            //Gamehub1.Score.submit(1);
+            //Gamehub1.Level.update("富农");
+        </script>
+    </body></html>
